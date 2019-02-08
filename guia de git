@@ -1,4 +1,4 @@
 1 git clone repo
-git add .
-commit -m "mensaje"
-git push
+2 git add .
+3 commit -m "mensaje"
+4 git push
