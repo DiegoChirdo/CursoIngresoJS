@@ -8,8 +8,8 @@ function mostrar()
 	var resultado;
 	var pago;
 
-	cuenta = cuentatotal.value;
-	amigos = cantidaddeamigos.value;
+	cuenta = prompt("Ingrese la cuenta");
+	amigos = prompt("Ingrese la cantidad de amigos");
 
 	cuenta = parseInt(cuenta);
 	amigos = parseInt(amigos);
@@ -20,8 +20,8 @@ function mostrar()
 	resultado = total + propina;
 	pago = (total + propina) / amigos;
 
-	alert("La cuenta es de $"+cuenta+", sumándose el IVA (%21), serían en total, $"+total+". En caso de contar una propina, al ser el %10, esta sería de $"+propina+". Lo que daría un resultado de $"+resultado+". Dado que ustedes son "+amigos+", deberían pagar "+pago+" cada uno.)";
-		
+	alert("La cuenta es de $"+cuenta+", sumándose el IVA (%21), serían en total, $"+total+". En caso de contar una propina, al ser el %10, esta sería de $"+propina+". Lo que daría un resultado de $"+resultado+". Dado que ustedes son "+amigos+", deberían pagar "+pago+" cada uno.");
+
 	
 	
 
