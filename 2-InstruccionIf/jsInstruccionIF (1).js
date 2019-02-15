@@ -1,7 +1,7 @@
 function mostrar()
 {
 //tomo la edad  
-// Comparaciones lògicas: >, >, ==(Comparar) != (No igual)
+// Comparaciones lògicas: >, >, ==(Comparar) != (No igual) && (Y)
 
 	var edad;
 	edad = document.getElementById('edad').value;
