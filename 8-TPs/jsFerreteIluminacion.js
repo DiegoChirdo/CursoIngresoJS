@@ -17,73 +17,72 @@ function CalcularPrecio ()
 	var marca;
 	var ingresobruto;
 	var precioLamparas;
-	var preciofinal; 
+	
 
 	lamparas = document.getElementById('Cantidad').value;
 	lamparas = parseInt(lamparas);
 	precio = 35;
 	precio = parseInt(precio);
+	document.getElementById("precioDescuento").value = parseInt(document.getElementById("precioDescuento").value);
 	precioLamparas = lamparas * precio;
-	ingresobruto = preciobruto * 10 / 100;
-	preciofinal = preciobruto + ingresobruto;
-
+	ingresobruto = document.getElementById("precioDescuento").value * 10 / 100;
+	
 
 
 if (lamparas >= 6)
-{
+	{
 	descuento = precioLamparas * 50 / 100;
-}
+	}
 
 else if (lamparas == 5)
-{
-
-if (document.getElementById("Marca").value == "ArgentinaLuz")
-{
-	descuento = precioLamparas * 40 / 100;
-
-}
-else 
-{
-	descuento = precioLamparas * 30 / 100;
-}
-
-}
+	{
+		if (document.getElementById("Marca").value == "ArgentinaLuz")
+		{
+			descuento = precioLamparas * 40 / 100;
+		}	
+		else 
+		{
+			descuento = precioLamparas * 30 / 100;
+		}
+	}
 
 else if (lamparas == 4)
-{
-	if (document.getElementById("Marca").value == "ArgentinaLuz" || document.getElementById("Marca").value == "FelipeLamparas")	
-{
-	descuento = precioLamparas * 25 / 100;
-}
+	{
+		if (document.getElementById("Marca").value == "ArgentinaLuz" || document.getElementById("Marca").value == "FelipeLamparas")	
+		{
+			descuento = precioLamparas * 25 / 100;
+		}
 
-	else
-{
-	descuento = precioLamparas * 20 / 100;
+		else	
+		{
+			descuento = precioLamparas * 20 / 100;
+		}
 
-}
-
-}
-else (lamparas == 3)
-{
-	if (document.getElementById("Marca").value == "ArgentinaLuz")
-{
-	descuento = precioLamparas * 15 / 100;
-
-}
-	else if (document.getElementById("Marca").value == "FelipeLamparas")
-{
-	descuento = precioLamparas * 10 / 100;
-}
-	else
-{
-	descuento = precioLamparas * 5 / 100;
-}
-}
-if (lamparas <= 2)
+	}
+else if (lamparas == 3)
+	{
+		if (document.getElementById("Marca").value == "ArgentinaLuz")
+		{
+			descuento = precioLamparas * 15 / 100;
+		}
+		else if (document.getElementById("Marca").value == "FelipeLamparas")
+		{
+			descuento = precioLamparas * 10 / 100;
+		}
+		else
+		{
+			descuento = precioLamparas * 5 / 100;
+		}
+	}
+else
 {
 	descuento = 0;
 }
 
+if (document.getElementById("precioDescuento").value >= 120)
+{
+	alert("Pagó "+ingresobruto+" de IIBB");
+}
 
 
 	preciobruto = precioLamparas - descuento;
