@@ -10,5 +10,35 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+	var lamparas;
+	var descuento;
+	var precio;
+	var total;
+	var importefinal;
+	var ingresobruto;
+	var precioLamparas;
+
+	lamparas = document.getElementById('Cantidad').value;
+	lamparas = parseInt(lamparas);
+	precio = lamparas * 35;
+
+
+if (lamparas >= 6)
+{
+	descuento = precio * 50 / 100;
+	total = precio - descuento;
+	document.getElementById("precioDescuento").value = total;
+
+}
+
+if  (document.getElementById("Marca").value = "ArgentinaLuz") >= 5
+{
+	descuento = precio * 40 / 100;
+	total = precio - descuento;
+	document.getElementById("precioDescuento").value = total;
+
+}
+
+
+
 }

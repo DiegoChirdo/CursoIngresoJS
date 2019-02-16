@@ -9,6 +9,7 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 */
 var numeroSecreto; 
 var contadorIntentos;
+var mensaje;
 
 function comenzar()
 {
@@ -33,7 +34,23 @@ function verificar()
 
 	if (numeroingresado == numeroSecreto)
 	{
-		alert("Sos un genio");
+	switch (contadorIntentos)
+	{
+	case numeroSecreto:
+	mensaje = "En el primer intento";
+	break;
+	case contadorIntentos=2:
+	mensaje ="Casi a la primera";
+	break;
+	case contadorIntentos=3:
+	mensaje = "Ganaste al tercer intento";
+	break;
+	default:
+	mensaje = "Despues del cuarto intento ya no cuenta";
+	break;
+	}
+
+		alert(mensaje);
 	}	
 
 	//else if (numeroingresado < numeroSecreto)
@@ -56,5 +73,6 @@ function verificar()
 		alert("Te pasaste");
 	}
 	}
-
+	console.log(numeroSecreto);
+	
 }
