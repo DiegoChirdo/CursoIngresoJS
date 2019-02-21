@@ -37,6 +37,8 @@ function mostrar()
 	precio3 = parseInt(precio3);
 	precio4 = parseInt(precio4);
 
+	// Intentar usar la cantidad de IFs menor posible
+
 	if (precio1 >= precio2)
 	{
 		if (precio1 >= precio3)
