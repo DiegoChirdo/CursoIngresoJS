@@ -1,14 +1,27 @@
 function mostrar()
 {
-
-	var contador=0;
-	//declarar contadores y variables 
-	
-	var respuesta="si";
+	var par;
+	var impar;
+	var cero;
+	var sumanegativos;
+	var sumapositivos;
+	var cantidadpositivos;
+	var cantidadnegativos;
+	var cantidadceros;
+	var cantidadpares;
+	var promediopositivos;
+	var promedionegativos;
+	var diferencia;
+	var acumulador; 
+	var contador;
+	var respuesta;
+	var numero;
+	contador = 0;
+	respuesta = "si";
 
 	while(respuesta!="no")
 	{
-		
+		if(numero==)
 	
 	}
 
