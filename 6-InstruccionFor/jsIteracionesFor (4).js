@@ -1,30 +1,38 @@
 function mostrar()
 {
-	var NumeroIngresado;
-	var NumeroAnterior;
-	var NumeroRepetido;
 
-	NumeroIngresado=prompt("Ingrese un número");
-	NumeroIngresado=parseInt(NumeroIngresado);
+	var numeroRecorrido;
+	var numeroAnterior;
+	var numeroIngresado;
 
-	for(NumeroAnterior=NumeroIngresado-1;NumeroAnterior>1;NumeroAnterior--)
-	{	for (NumeroRepetido;)
+	numeroIngresado=prompt("Ingrese un numero");
+	numeroIngresado=parseInt(numeroIngresado);
 
-		if(NumeroIngresado%NumeroAnterior==0)
+	for(numeroRecorrido=numeroIngresado-1;numeroRecorrido>1;numeroRecorrido--)
+	{
+
+		for(numeroAnterior=numeroRecorrido-1;numeroAnterior>1;numeroAnterior--)
 		{
-			break;
+			if(numeroRecorrido%numeroAnterior==0)
+			{
+					break;		
+			}
+
+
+			console.log(numeroAnterior);
+
 		}
-		console.log(NumeroAnterior);
+
+		if(numeroAnterior==1)
+			{
+				console.log("es primo"+numeroRecorrido);			
+			}
+
+
+		
 	}
 
-	if(NumeroAnterior==1)
-	{
-		console.log("Es primo");
-	}
-	else
-	{
-		console.log("No es primo");
-	}
+	
 
 
 
