@@ -1,38 +1,76 @@
-function mostrar()
-{
 //Bienvenidos. 
 //Realizar el algoritmo que permita el ingreso por prompt de las notas (validar entre 0 y 10) , el sexo (validar el sexo “f” o “m”) de 5 alumnos, informar por alert: 
 //a) El promedio de las notas totales. 
 //b) La nota más baja y el sexo de esa persona. 
 //c) La cantidad de varones que su nota haya sido mayor o igual a 6.
-	var contador=0;
-	var acumulador=0;
-	var sexo;
-	var nota;
+function mostrar()
+{
+	var contador;
+	var cantidadAlumnos;
+	var alumnoNota;
+	var alumnoSexo;
+	var totalNotas;
 	var promedio;
-	var baja;
-	var cantidadvarones;
-	nota = parseInt(nota);
+	var notaMasBaja;
+	var notaMasBajaSexo;
+	var contadorSupera5;
+	contador = 0;
+	cantidadAlumnos = 5;
+	totalNotas = 0;
+	contadorSupera5 = 0;
 
-	while (contador<5)
-	{
-		sexo = prompt("Ingrese sexo (F o M)");
-		nota = prompt ("Ingrese notas");
-		
-		if (sexo!="F" || sexo!="M")
-		{
-			prompt("Error, ingrese nuevamente el sexo");
-		}	
-		else if (nota>10 || nota<0) 
-		{
-			prompt("Error, ingrese nuevamente la nota");
+	while (contador < cantidadAlumnos) {
+		// entrada y validacion dedatos
+		alumnoNota = prompt("Ingrese Nota");
+		alumnoNota = parseInt(alumnoNota);
+		while (alumnoNota <= 0 || alumnoNota >= 10) {
+			alumnoNota = prompt("error, Ingrese Nota");
+			alumnoNota = parseInt(alumnoNota);
 		}
 
+		alumnoSexo = prompt("Ingrese sexo");
+		while (alumnoSexo != "f" && alumnoSexo != "m") {
+			alumnoSexo = prompt("error, Ingrese sexo");
+		}
 
+		// total de notas para promediar despues
+		totalNotas = totalNotas + alumnoNota;
+
+		// Nota mas baja
+		if (contador == 0) {
+			notaMasBaja = alumnoNota;
+			notaMasBajaSexo = alumnoSexo;
+		} else {
+			if (notaMasBaja > alumnoNota) {
+				notaMasBaja = alumnoNota;
+				notaMasBajaSexo = alumnoSexo;
+			}
+		}
+
+		// varones con nota >= 6
+		if (alumnoSexo == "m" && alumnoNota >= 6) {
+				contadorSupera5 = contadorSupera5 + 1;
+		}
+
+		/* console.log("suma " + totalNotas);
+		console.log("nota más baja y el sexo " + notaMasBaja + " " + notaMasBajaSexo);
+		console.log("contadorSupera5 " + contadorSupera5); */
+		contador = contador + 1;
 	}
-
-	alert("Promedio es "+promedio);
-	
-
-
+	promedio = totalNotas / cantidadAlumnos;
+	alert(
+		"Promedio notas: " + totalNotas +
+		" | Nota más baja y el sexo: " + notaMasBaja + " " + notaMasBajaSexo +
+		" | Varones nota += a 6: " + contadorSupera5
+	)
 }
+
+
+/* 
+Bienvenidos. 
+Realizar el algoritmo que permita el ingreso por prompt de las notas (validar entre 0 y 10) , 
+el sexo (validar el sexo “f” o “m”) de 5 alumnos, informar por alert: 
+a) El promedio de las notas totales. 
+b) La nota más baja y el sexo de esa persona. 
+c) La cantidad de varones que su nota haya sido mayor o igual a 6.
+ */
