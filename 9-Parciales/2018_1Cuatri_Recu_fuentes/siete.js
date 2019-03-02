@@ -15,19 +15,18 @@ function mostrar()
 	contadorcombustible=0;
 	acumulador=0;
 
-	while (velocidad>=250 || velocidad<=0)
+	while (contador<5)
 	{
-		velocidad=prompt("Ingrese velocidad (0-250)");
-		
-		while (combustible!="l" || combustible!="s")
-
+		contador=contador+1;
+		while (velocidad>0 || velocidad<250)
 		{
-			combustible=prompt("Ingrese combustible aquí");
+			velocidad=prompt("Ingrese velocidad");
+			velocidad=parseInt(velocidad);
 		}
-		contadorvelocidad=contadorvelocidad+1;
-
-
-
+		while (combustible!="L" && combustible!="S")
+		{
+			combustible=prompt("Ingrese combustible");
+		}
 	}
 
 }

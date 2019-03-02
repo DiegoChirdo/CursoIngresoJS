@@ -1,5 +1,8 @@
 FerreteIluminación
 jsAdivinaElNumero1
+jsIteraciones(6).js
+jsIteraciones(9).js
+jsIteraciones(10).js
 CuatruRecuFuentes/cinco.js
 CuatruRecuFuentes/cuatro.js
 CuatruRecuFuentes/nueve.js

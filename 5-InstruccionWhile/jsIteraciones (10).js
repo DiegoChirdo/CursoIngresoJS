@@ -15,7 +15,6 @@ function mostrar()
 	var diferencia;
 	var contadorpares;
 	var resto;
-
 	respuesta="si";
 	positivos=0;
 	negativos=0;
